@@ -1,0 +1,26 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG tests">
+    <test name="Independent Test">
+        <groups>
+            <run>
+                <include name="page"/>
+                <include name="search"/>
+                <include name="refresh"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="basicTests.IndependentTest"/>
+        </classes>
+    </test>
+    <test name="Parameter Test">
+        <parameter name="searchString" value="epam"/>
+        <classes>
+            <class name="basicTests.ParameterTest"/>
+        </classes>
+    </test>
+    <test name="Factory and Dependent Test">
+        <classes>
+            <class name="SearchTestFactory"/>
+        </classes>
+    </test>
+</suite>
