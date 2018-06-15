@@ -32,7 +32,7 @@
                                 <value>false</value> <!-- disabling default listeners is optional -->
                             </property>
                             <property>
-                                <name>listeners</name>
+                                <name>listener</name>
                                 <value>
                                     utils.listeners.SuiteListener,utils.listeners.TestListener,utils.listeners.AnnotationTransformer,utils.listeners.MethodInterceptor,utils.listeners.InvokedMethodListener
                                 </value>

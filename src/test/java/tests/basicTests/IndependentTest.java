@@ -20,7 +20,6 @@ public class IndependentTest extends BaseTest {
     @Test(groups = GroupProps.FIRST_TEST_GROUP)
     public void pageTest() {
         Assert.assertTrue(googleSearchPage.isExpectedPage(CommonProps.BASE_URL));
-        Assert.fail();
     }
 
     @Test(groups = GroupProps.SECOND_TEST_GROUP)

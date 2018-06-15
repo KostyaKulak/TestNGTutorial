@@ -13,7 +13,7 @@ import static utils.logger.MyLogger.LOGGER;
 public class GoogleSearchPage {
     @FindBy(css = "input#lst-ib")
     private WebElement searchField;
-    @FindBy(xpath = "//input[@name='btnK']")
+    @FindBy(xpath = "//*[@id=\"tsf\"]/div[2]/div[3]/center/input[1]")
     private WebElement searchButton;
     private WebDriver driver;
 
