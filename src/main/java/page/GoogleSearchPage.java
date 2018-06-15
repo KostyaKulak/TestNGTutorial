@@ -1,36 +1,29 @@
-package pages;
+package page;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utils.constants.CommonProps;
 
-import static utils.Constants.BASE_URL;
-
+import static utils.logger.MyLogger.LOGGER;
 
 public class GoogleSearchPage {
-    private static final Logger LOGGER = LogManager.getLogger(GoogleSearchPage.class.getName());
-
     @FindBy(css = "input#lst-ib")
     private WebElement searchField;
-    @FindBy(xpath = "//input[@value='Пошук Google']")
+    @FindBy(xpath = "//input[@name='btnK']")
     private WebElement searchButton;
-
     private WebDriver driver;
-
 
     public GoogleSearchPage(WebDriver driver) {
         this.driver = driver;
-        this.driver.manage().window().maximize();
         PageFactory.initElements(driver, this);
     }
 
     public GoogleSearchPage open() {
-        driver.navigate().to(BASE_URL);
+        driver.navigate().to(CommonProps.BASE_URL);
         return this;
     }
 
@@ -38,19 +31,19 @@ public class GoogleSearchPage {
         LOGGER.info("Search for " + searchString);
         new WebDriverWait(driver, 1000).until(ExpectedConditions.elementToBeClickable(searchField));
         searchField.sendKeys(searchString);
-        new WebDriverWait(driver, 1000).until(ExpectedConditions.elementToBeClickable(searchButton));
         searchButton.click();
         return this;
     }
 
     public boolean isExpectedPage(String url) {
-        LOGGER.debug("Start comparing current page with " + url);
+        LOGGER.info("Start comparing current page with " + url);
         return driver.getCurrentUrl().contains(url);
     }
 
     public void refresh() {
-        String currentUrl = driver.getCurrentUrl().length() >= 30 ? driver.getCurrentUrl().substring(0, 30) : driver.getCurrentUrl();
-        LOGGER.debug("Page " + currentUrl + " was refreshed");
+        String currentUrl = driver.getCurrentUrl().length() >= CommonProps.MAX_OUTPUT_ADDRESS ?
+                driver.getCurrentUrl().substring(0, CommonProps.MAX_OUTPUT_ADDRESS) : driver.getCurrentUrl();
+        LOGGER.info("Page " + currentUrl + " was refreshed");
         driver.navigate().refresh();
     }
 }

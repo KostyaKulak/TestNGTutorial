@@ -1,26 +1,21 @@
-package basicTests;
+package tests;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-import pages.GoogleSearchPage;
+import page.GoogleSearchPage;
 
-public class ParameterTest {
-    private WebDriver driver;
-    private GoogleSearchPage googleSearchPage;
+public class BaseTest {
+    protected WebDriver driver;
+    protected GoogleSearchPage googleSearchPage;
 
     @BeforeClass
     public void loadState() {
         driver = new FirefoxDriver();
+        driver.manage().window().maximize();
         googleSearchPage = new GoogleSearchPage(driver);
         googleSearchPage.open();
-    }
-
-    @Test(parameters = "searchString")
-    public void searchTest(String searchString) {
-        googleSearchPage.search(searchString);
     }
 
     @AfterClass

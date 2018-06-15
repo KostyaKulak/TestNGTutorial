@@ -1,13 +1,11 @@
 package utils.listeners;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 
-public class SuiteListener implements ISuiteListener {
+import static utils.logger.MyLogger.LOGGER;
 
-    private static final Logger LOGGER = LogManager.getLogger(SuiteListener.class.getName());
+public class SuiteListener implements ISuiteListener {
 
     @Override
     public void onStart(ISuite arg0) {

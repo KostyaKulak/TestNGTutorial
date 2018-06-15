@@ -9,18 +9,18 @@
             </run>
         </groups>
         <classes>
-            <class name="basicTests.IndependentTest"/>
+            <class name="tests.basicTests.IndependentTest"/>
         </classes>
     </test>
     <test name="Parameter Test">
         <parameter name="searchString" value="epam"/>
         <classes>
-            <class name="basicTests.ParameterTest"/>
+            <class name="tests.basicTests.ParameterTest"/>
         </classes>
     </test>
     <test name="Factory and Dependent Test">
         <classes>
-            <class name="SearchTestFactory"/>
+            <class name="tests.SearchTestFactory"/>
         </classes>
     </test>
 </suite>
