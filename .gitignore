@@ -6,6 +6,7 @@
 *.txt
 .idea/
 target/
+test-output/
 
 # Compiled class file
 *.class
