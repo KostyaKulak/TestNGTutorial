@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestNG tests]">
+  <test name="Independent Test(failed)">
+    <groups>
+      <run>
+        <include name="page"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="tests.basicTests.IndependentTest">
+        <methods>
+          <include name="afterClass"/>
+          <include name="pageTest"/>
+          <include name="loadState"/>
+        </methods>
+      </class> <!-- tests.basicTests.IndependentTest -->
+    </classes>
+  </test> <!-- Independent Test(failed) -->
+</suite> <!-- Failed suite [TestNG tests] -->
