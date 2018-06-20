@@ -1,7 +1,6 @@
-package tests.basicTests;
+package basictest;
 
 import org.testng.annotations.Test;
-import tests.BaseTest;
 
 public class ParameterTest extends BaseTest {
     @Test(parameters = "searchString")

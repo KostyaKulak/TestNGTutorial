@@ -1,4 +1,4 @@
-package utils.constants;
+package util.constant;
 
 public class TestProps {
     public static final String FIRST_SEARCH_STRING = "java";

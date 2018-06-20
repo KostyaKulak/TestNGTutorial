@@ -1,4 +1,4 @@
-package utils.constants;
+package util.constant;
 
 public class CommonProps {
     public static final String BASE_URL = "https://www.google.by";

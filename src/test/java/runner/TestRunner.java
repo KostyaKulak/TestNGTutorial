@@ -3,8 +3,8 @@ package runner;
 import org.testng.ITestNGListener;
 import org.testng.TestNG;
 import org.testng.xml.XmlSuite;
-import utils.constants.GroupProps;
-import utils.listeners.InvokedMethodListener;
+import util.constant.GroupProps;
+import util.listener.InvokedMethodListener;
 
 import java.util.ArrayList;
 import java.util.List;

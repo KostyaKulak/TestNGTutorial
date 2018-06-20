@@ -29,12 +29,12 @@
                         <properties>
                             <property>
                                 <name>usedefaultlisteners</name>
-                                <value>false</value> <!-- disabling default listeners is optional -->
+                                <value>false</value> <!-- disabling default listener is optional -->
                             </property>
                             <property>
                                 <name>listener</name>
                                 <value>
-                                    utils.listeners.SuiteListener,utils.listeners.TestListener,utils.listeners.AnnotationTransformer,utils.listeners.MethodInterceptor,utils.listeners.InvokedMethodListener
+                                    util.listener.SuiteListener,util.listener.TestListener,util.listener.AnnotationTransformer,util.listener.MethodInterceptor,util.listener.InvokedMethodListener
                                 </value>
                             </property>
                         </properties>

@@ -6,9 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import utils.constants.CommonProps;
+import util.constant.CommonProps;
 
-import static utils.logger.MyLogger.LOGGER;
+import static util.logger.MyLogger.LOGGER;
 
 public class GoogleSearchPage {
     @FindBy(css = "input#lst-ib")

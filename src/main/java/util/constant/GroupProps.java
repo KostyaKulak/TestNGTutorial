@@ -1,4 +1,4 @@
-package utils.constants;
+package util.constant;
 
 public class GroupProps {
     public static final String FIRST_TEST_GROUP = "page";

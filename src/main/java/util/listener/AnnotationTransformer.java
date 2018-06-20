@@ -1,16 +1,16 @@
-package utils.listeners;
+package util.listener;
 
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 import org.testng.annotations.Test;
-import utils.annotation.TesterInfo;
-import utils.constants.GroupProps;
+import util.annotation.TesterInfo;
+import util.constant.GroupProps;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 
-import static utils.logger.MyLogger.LOGGER;
+import static util.logger.MyLogger.LOGGER;
 
 public class AnnotationTransformer implements IAnnotationTransformer {
 
@@ -41,6 +41,11 @@ public class AnnotationTransformer implements IAnnotationTransformer {
                     + ", created by " + createdBy
                     + " and last modified at " + lastModified
                     + ", has " + priority + " priority, ");
+            if (priority.equals(TesterInfo.Priority.LOW)) {
+                if (iTestAnnotation.getEnabled()) {
+                    iTestAnnotation.setEnabled(false);
+                }
+            }
         }
     }
 }

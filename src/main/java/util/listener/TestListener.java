@@ -1,10 +1,10 @@
-package utils.listeners;
+package util.listener;
 
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-import static utils.logger.MyLogger.LOGGER;
+import static util.logger.MyLogger.LOGGER;
 
 public class TestListener implements ITestListener {
 
@@ -69,6 +69,6 @@ public class TestListener implements ITestListener {
                 break;
         }
         LOGGER.info("Test Status: " + status);
-        LOGGER.info("Test duration " + (result.getEndMillis() - result.getStartMillis()) + " millis");
+        LOGGER.info("Test " + result.getMethod().getMethodName() + " duration " + (result.getEndMillis() - result.getStartMillis()) + " millis");
     }
 }

@@ -1,13 +1,13 @@
-package tests.basicTests;
+package basictest;
 
 import org.testng.Assert;
+import org.testng.SkipException;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import tests.BaseTest;
-import utils.constants.CommonProps;
-import utils.constants.GroupProps;
-import utils.constants.TestProps;
+import util.constant.CommonProps;
+import util.constant.GroupProps;
+import util.constant.TestProps;
 
 public class IndependentTest extends BaseTest {
 
@@ -28,7 +28,7 @@ public class IndependentTest extends BaseTest {
     }
 
     @Test(groups = GroupProps.THIRD_TEST_GROUP)
-    public void refreshTest() {
+    public void refreshTest() throws SkipException {
         googleSearchPage.refresh();
     }
 

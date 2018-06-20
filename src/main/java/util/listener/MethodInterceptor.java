@@ -1,9 +1,9 @@
-package utils.listeners;
+package util.listener;
 
 import org.testng.IMethodInstance;
 import org.testng.IMethodInterceptor;
 import org.testng.ITestContext;
-import utils.constants.GroupProps;
+import util.constant.GroupProps;
 
 import java.util.ArrayList;
 import java.util.List;

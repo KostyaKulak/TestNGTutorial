@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="TestNG tests">
+<suite name="TestNG factory">
     <test name="Independent Test">
         <groups>
             <run>
@@ -9,18 +9,18 @@
             </run>
         </groups>
         <classes>
-            <class name="tests.basicTests.IndependentTest"/>
+            <class name="basictest.IndependentTest"/>
         </classes>
     </test>
     <test name="Parameter Test">
         <parameter name="searchString" value="epam"/>
         <classes>
-            <class name="tests.basicTests.ParameterTest"/>
+            <class name="basictest.ParameterTest"/>
         </classes>
     </test>
     <test name="Factory and Dependent Test">
         <classes>
-            <class name="tests.SearchTestFactory"/>
+            <class name="factory.SearchTestFactory"/>
         </classes>
     </test>
 </suite>
