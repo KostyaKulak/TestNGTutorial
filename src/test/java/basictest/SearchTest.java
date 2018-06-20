@@ -7,6 +7,8 @@ import util.annotation.TesterInfo;
 import util.constant.CommonProps;
 import util.constant.TestProps;
 
+import static util.logger.MyLogger.LOGGER;
+
 public class SearchTest extends BaseTest {
     private String searchString = "";
     public static int stringLength = 10;
@@ -29,7 +31,7 @@ public class SearchTest extends BaseTest {
     }
 
 
-    @Test(dataProviderClass = dataprovidermanager.DataProviderManager.class,dataProvider = "searchStrings")
+    @Test(dataProviderClass = dataprovidermanager.DataProviderManager.class, dataProvider = "searchStrings")
     public void searchTestWithParams(String searchString) {
         googleSearchPage.search(searchString);
     }
@@ -44,17 +46,18 @@ public class SearchTest extends BaseTest {
     @TesterInfo
     @Test
     public void disableTest() {
-        System.out.println("hello");
+        LOGGER.info("hello");
     }
+
     @TesterInfo
     @Test
     public void disableSecondTest() {
-        System.out.println("hello user");
+        LOGGER.info("hello user");
     }
 
     @Test
-    public  void skipTest(){
-        System.out.println("JAVA FOREVER");
+    public void skipTest() {
+        LOGGER.info("JAVA FOREVER");
         throw new SkipException("");
     }
 }

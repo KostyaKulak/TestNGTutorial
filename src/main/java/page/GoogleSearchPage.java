@@ -29,6 +29,7 @@ public class GoogleSearchPage {
 
     public GoogleSearchPage search(String searchString) {
         LOGGER.info("Search for " + searchString);
+        open();
         new WebDriverWait(driver, 1000).until(ExpectedConditions.elementToBeClickable(searchField));
         searchField.sendKeys(searchString);
         searchButton.click();

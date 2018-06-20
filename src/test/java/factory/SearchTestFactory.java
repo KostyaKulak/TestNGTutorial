@@ -1,7 +1,7 @@
 package factory;
 
-import org.testng.annotations.Factory;
 import basictest.SearchTest;
+import org.testng.annotations.Factory;
 import util.constant.TestProps;
 
 public class SearchTestFactory {
